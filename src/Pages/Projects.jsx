@@ -16,7 +16,7 @@ function Projecs() {
 
                 <h1 className="text-center py-20 text-lime-400 text-3xl font-extrabold"><span className="text-white">{"<"}</span> Projects <span className="text-white">{">"}</span></h1>
 
-                <div className="flex flex-wrap justify-between px-40 sm:px-5 gap-5 m-auto">
+                <div className="flex flex-wrap justify-center px-40 sm:px-5 gap-5 m-auto">
                     <Card className="w-96 sm:w-full  bg-yellow-100">
                         <CardHeader shadow={false} floated={false} className="h-96">
                             <img

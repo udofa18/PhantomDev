@@ -7,6 +7,8 @@ import {
   } from "@material-tailwind/react";
   import { BellIcon, Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
   function Navigaiton() {
 
@@ -27,8 +29,8 @@ import { NavLink } from "react-router-dom";
          <span className="text-white">{'< >'}</span>
         </Typography></NavLink> 
         <div className="ml-auto flex gap-1 md:mr-4 text-lime-400 gap-4 ">
-         <a className="m-auto cursor-pointer btn"> 
-           CV
+         <a  href="https://docs.google.com/document/d/1lbe_fy401jjGXfavvQHIAd3_X1qbn-pI/edit#heading=h.gjdgxs" className="m-auto cursor-pointer btn"> 
+          <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon> CV
          </a>
          <NavLink to="publications" className="m-auto cursor-pointer btn"> 
           Publications
@@ -36,9 +38,7 @@ import { NavLink } from "react-router-dom";
          <NavLink to="projects" className="m-auto cursor-pointer btn"> 
           Projects
          </NavLink>
-          <IconButton variant="text" color="white">
-            <BellIcon className="h-4 w-4" />
-          </IconButton>
+        
         </div>
        
       </div>

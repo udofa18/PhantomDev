@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../props/MovingText.css'; // Import CSS file for styling
 import { useState, useEffect } from 'react'
 import { faCss3, faGit, faGithub, faHtml5, faLinkedin, faReact, faTwitter, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 function Home() {
 
@@ -28,10 +29,10 @@ function Home() {
     return (
         <><div className='block'>
 
-            <div className='flex sm:flex-col m-auto justify-between px-20 py-40 sm:py-10 m-auto h-full sm:px-5'>
-                <div className='w-1/2 m-auto sm:w-full'>
+            <div className='flex sm:flex-col md:flex-col m-auto justify-between px-20 md:px-10 py-40 md:p-20 sm:py-10 m-auto h-full sm:px-5'>
+                <div className='w-1/2 m-auto sm:w-full md:w-full'>
                     <h3 className='text-4xl py-10 sm:text-xl text-lime-800'>Hi there!!😁</h3>
-                    <h1 style={{ fontFamily: "monospace" }} className=' text-6xl text-lime-400  sm:text-3xl'>
+                    <h1 style={{ fontFamily: "monospace" }} className=' text-6xl text-lime-400  sm:text-3xl md:text-4xl'>
                         <TypeAnimation
                             sequence={['Frontend Developer', 1000, 'Developer Advocate', 1000, 'Community Manager', 1000]}
                             repeat={Infinity} /><span className='text-yellow-400'>..</span></h1>
@@ -48,7 +49,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className='m-auto  w-1/2 sm:w-full flex flex-col  sm:py-10'>
+                <div className='m-auto  w-1/2 sm:w-full flex flex-col  sm:py-10 md:py-10  md:w-full'>
                     <div className='relative rounded-full overflow-clip'>
                         <img src="/images/dan.png" alt="" className='rounded-full  flex justify-end m-auto w-60 bg-yellow-600' />
 
@@ -58,11 +59,13 @@ function Home() {
                     
                 </div>
             </div>
-            <div className='text-yellow-600 text-4xl flex justify-center gap-20'>
+            <div className='text-yellow-600 text-4xl flex justify-center gap-20 sm:gap-5 sm:text-2xl'>
                <a href='https://www.linkedin.com/in/daniel-udofa-865778149/' target='_blank'> <FontAwesomeIcon icon={faLinkedin} bounce /></a>
 
                 <a href='https://github.com/udofa18' target='_blank'><FontAwesomeIcon icon={faGithub} bounce /></a>
                 <a href='https://twitter.com/Udofa18' target='_blank'> <FontAwesomeIcon icon={faTwitter} bounce /></a>
+
+                <a href='mailto:danieludofa452@gmail.com' target='_blank'> <FontAwesomeIcon icon={faEnvelope} bounce /></a>
 
             </div>
 
