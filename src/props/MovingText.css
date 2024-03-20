@@ -1,0 +1,15 @@
+.moving-text {
+    /* position: absolute; */
+    top: 90%; /* Adjust as needed */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: moveText 40s linear infinite; /* Animation properties */
+  }
+  
+  @keyframes moveText {
+    from {
+        transform: translateX(100vw); /* Start from the extreme right */
+      }
+      to {
+        transform: translateX(-100%); /* Move to the extreme left */
+      }
+  }
