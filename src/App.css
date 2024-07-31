@@ -4,13 +4,14 @@
 
 
 html{
+
   background-color: #242424;
 
 }
 #root {
-  background-color: #242424;
+  background-image: radial-gradient( circle 477px at 0.9% -1.8%,  rgba(206,242,42,1) 0%, rgba(123,128,8,1) 43.9%, rgba(45,46,3,1) 84.2%, rgba(30,3,3,1) 99.3% );
+  /* background-color: #242424; */
 margin: 0;
-/* height: 100vh; */
 }
 
 

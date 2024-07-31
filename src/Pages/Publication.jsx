@@ -14,11 +14,11 @@ function Publication() {
         <>
             <div>
 
-                <h1 className="text-center py-20 text-lime-400 text-3xl font-extrabold"><span className="text-white">{"<"}</span> Publications <span className="text-white">{">"}</span></h1>
+                <h1 className="text-center py-20 text-lime-400 text-2xl font-extrabold"><span className="text-white">{"<"}</span> Publications <span className="text-white">{">"}</span></h1>
                
-               <div className="flex flex-wrap justify-center px-40 sm:px-5 gap-5 m-auto">
-                <Card className="w-96 sm:w-full bg-yellow-100">
-                    <CardHeader shadow={false} floated={false} className="h-96">
+               <div className="flex flex-wrap justify-center sm:px-5 gap-5 m-auto">
+                <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
+                    <CardHeader shadow={false} floated={false} className="h-60">
                         <img
                             src="/images/stress.png"
                             alt="card-image"
@@ -27,7 +27,7 @@ function Publication() {
                     </CardHeader>
                     <CardBody>
                         <div className="mb-2 flex items-center justify-between">
-                            <Typography color="blue-gray" className="text-2xl">
+                            <Typography color="lime" className="text-xl">
                             Managing "STRESS😩"as Software Engineer
                             </Typography>
                          
@@ -35,7 +35,7 @@ function Publication() {
                         <Typography
                             variant="small"
                             color="gray"
-                            className="font-normal opacity-75"
+                            className="font-normal text-gray-400"
                         >
                             Managing stress as a software engineer is crucial for maintaining both your mental well-being and your productivity. ...
                         </Typography>
@@ -51,8 +51,8 @@ function Publication() {
                         </Button></a>
                     </CardFooter>
                 </Card>
-                <Card className="w-96 sm:w-full bg-yellow-100">
-                    <CardHeader shadow={false} floated={false} className="h-96">
+                <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
+                    <CardHeader shadow={false} floated={false} className="h-60">
                         <img
                             src="/images/dev.png"
                             alt="card-image"
@@ -61,7 +61,7 @@ function Publication() {
                     </CardHeader>
                     <CardBody>
                         <div className="mb-2 flex items-center justify-between">
-                            <Typography color="blue-gray" className="text-2xl">
+                            <Typography color="lime" className="text-xl">
                             Beginners Guide to Developer Relations
 
                             </Typography>
@@ -70,7 +70,7 @@ function Publication() {
                         <Typography
                             variant="small"
                             color="gray"
-                            className="font-normal opacity-75"
+                            className="font-normal text-gray-400"
                         >
                             At its core, Developer Relations is about establishing and maintaining a strong bond between developers and the company's products or services. ...
                         </Typography>
@@ -86,8 +86,8 @@ function Publication() {
                         </Button></a>
                     </CardFooter>
                 </Card>
-                <Card className="w-96 sm:w-full bg-yellow-100">
-                    <CardHeader shadow={false} floated={false} className="h-96">
+                <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
+                    <CardHeader shadow={false} floated={false} className="h-60">
                         <img
                             src="/images/amina.png"
                             alt="card-image"
@@ -96,7 +96,7 @@ function Publication() {
                     </CardHeader>
                     <CardBody>
                         <div className="mb-2 flex items-center justify-between">
-                            <Typography color="blue-gray" className="text-2xl">
+                            <Typography color="lime" className="text-xl">
                             How to give your site an animated background using particle.js
                             </Typography>
                          
@@ -104,7 +104,7 @@ function Publication() {
                         <Typography
                             variant="small"
                             color="gray"
-                            className="font-normal opacity-75"
+                            className="font-normal text-gray-400"
                         >
                             Particles.js is a JavaScript library for creating animated, interactive particle backgrounds for web pages.   ...
                         </Typography>
