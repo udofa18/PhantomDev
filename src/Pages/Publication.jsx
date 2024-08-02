@@ -14,7 +14,7 @@ function Publication() {
         <>
             <div>
 
-                <h1 className="text-center py-20 text-lime-400 text-2xl font-extrabold"><span className="text-white">{"<"}</span> Publications <span className="text-white">{">"}</span></h1>
+                <h1 className="text-center py-20 sm:pt-40 text-lime-400 text-2xl font-extrabold"><span className="text-white">{"<"}</span> Publications <span className="text-white">{">"}</span></h1>
                
                <div className="flex flex-wrap justify-center sm:px-5 gap-5 m-auto">
                 <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">

@@ -51,7 +51,7 @@ function Home() {
                     </div>
                 </div>
 
-                <div className='m-auto  w-1/2  sm:w-full flex flex-col  sm:py-10 md:py-10  md:w-full '>
+                <div className='m-auto  w-1/2 right sm:w-full flex flex-col  sm:py-10 md:py-10  md:w-full '>
                     <div className='m-auto'>
                         <img src="/images/dan.png" alt="" className='relative inline-block h-[200px] w-[200px] m-auto !rounded-full object-cover object-center bg-yellow-600' />
 

@@ -22,16 +22,16 @@ function Projecs() {
         <>
             <div className="h-screen sm:h-full">
 
-                <h1 className="text-center sm:py-40 pt-20 pb-5 text-lime-400 text-2xl font-bold"><span className="text-white">{"<"}</span> Projects <span className="text-white">{">"}</span></h1>
+                <h1 className="text-center sm:py-10 pt-20 sm:pt-36 pb-5 text-lime-400 text-2xl font-bold"><span className="text-white">{"<"}</span> Projects <span className="text-white">{">"}</span></h1>
 <p className="text-center py-5 text-gray-300"> For more projects Visit my <a href="https://github.com/udofa18" target="_blank" className="text-lime-500 ">Github Account</a></p>
-                <div className="flex  justify-center gap-5  ">
+                <div className="flex   justify-center gap-5  ">
                     <Swiper
                         slidesPerView={4}
                         spaceBetween={30}
                         centeredSlides={true}
                         autoplay={{
                             delay: 2500,
-                            disableOnInteraction: false,
+                            disableOnInteraction: true,
                         }}
                         pagination={{
                             clickable: true,
@@ -40,22 +40,23 @@ function Projecs() {
                         modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper"
                         breakpoints={{
-                            // when window width is >= 640px
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 10,
-                            },
-                            // when window width is >= 768px
-                            768: {
-                                slidesPerView: 2,
+                            360: {
+                                slidesPerView: 1.2,
                                 spaceBetween: 20,
+                              },
+                            430: {
+                              slidesPerView: 1.2,
+                              spaceBetween: 20,
                             },
-                            // when window width is >= 1024px
+                            768: {
+                              slidesPerView: 4,
+                              spaceBetween: 40,
+                            },
                             1024: {
-                                slidesPerView: 4,
-                                spaceBetween: 30,
+                              slidesPerView: 4,
+                              spaceBetween: 50,
                             },
-                        }}
+                          }}
                     >
                         <SwiperSlide>
                             <Card className="w-80 nav sm:w-full bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
