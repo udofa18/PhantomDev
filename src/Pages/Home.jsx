@@ -27,7 +27,7 @@ function Home() {
     }, [left]);
 
     return (
-        <div className='relative flex  flex-col items-stretch m-auto h-screen '>
+        <div className='relative flex  flex-col items-stretch m-auto h-screen sm:h-full '>
 
             <div className='flex sm:flex-col md:flex-col m-auto justify-between px-20 md:px-10 md:p-20 py-28 sm:py-10   sm:px-5 ' >
                 <div className='w-1/2 m-auto sm:w-full md:w-full'>
