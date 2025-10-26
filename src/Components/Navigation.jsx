@@ -29,9 +29,7 @@ function Navigaiton() {
               <span className="text-white">{'< >'}</span>
             </Typography></NavLink>
           <div className="ml-auto flex md:mr-4 text-lime-400 gap-4 sm:m-auto">
-            <a href="https://docs.google.com/document/d/1hoLnzDZPdZEWKbhwY_tv9fino-1nSOUq" target="_blank" className="m-auto cursor-pointer btn">
-              <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon> CV
-            </a>
+        
             <NavLink to="publications" className="m-auto cursor-pointer btn">
               Publications
             </NavLink>
@@ -41,7 +39,9 @@ function Navigaiton() {
             <NavLink to="experience" className="m-auto cursor-pointer btn">
               Experience
             </NavLink>
-
+    <a href="https://docs.google.com/document/d/1hoLnzDZPdZEWKbhwY_tv9fino-1nSOUq" target="_blank" className="m-auto cursor-pointer btn">
+              <FontAwesomeIcon icon={faDownload}></FontAwesomeIcon> CV
+            </a>
           </div>
 
         </div>
