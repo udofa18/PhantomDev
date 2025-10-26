@@ -101,6 +101,90 @@ const Experience = () => {
                             </div>
                         </li>
                         <li className="relative flex flex-col gap-2">
+                            <span className="absolute left-0 grid justify-center transition-opacity duration-200 bg-transparent">
+                                <span className="h-full w-0.5 bg-blue-gray-100"></span>
+                            </span>
+                            <div className="flex items-center gap-4">
+                                <span className="relative z-[2] w-max flex-shrink-0 overflow-hidden rounded-full bg-gray-900 p-2 text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                                        className="w-4 h-4">
+                                        <path fillRule="evenodd"
+                                            d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                                            clipRule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <h5
+                                    className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-lime-400">
+                                    Xedla pay
+                                </h5>
+                            </div>
+                            <div className="flex gap-4 pb-8">
+                                <span className="flex-shrink-0 invisible h-full pointer-events-none"></span>
+                                <div>
+                                    <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-200">
+                                       Cofounder and Software Engineer
+                                    </p>
+                                    <ol className='list-disc gap-4 flex flex-col'>
+                                        <li>
+                                            <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-500 ">   A Safe and Reliable Option for Buyers and Sellers, Perform all your day to day financial transaction .</p>
+                                        </li>
+                                        <li>
+                                            <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-500 "> Designed, Developed, Researched, and managed the successful launch of <a href='https://www.xedla.com/' className='text-lime-400' target='_blank'>https://www.xedla.com/ </a>. App available on playstore and appstore.
+
+
+                                            </p>
+                                        </li>
+                                       
+
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+                        <li className="relative flex flex-col gap-2">
+                            <span className="absolute left-0 grid justify-center transition-opacity duration-200 bg-transparent">
+                                <span className="h-full w-0.5 bg-blue-gray-100"></span>
+                            </span>
+                            <div className="flex items-center gap-4">
+                                <span className="relative z-[2] w-max flex-shrink-0 overflow-hidden rounded-full bg-gray-900 p-2 text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                                        className="w-4 h-4">
+                                        <path fillRule="evenodd"
+                                            d="M5.25 9a6.75 6.75 0 0113.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 01-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 11-7.48 0 24.585 24.585 0 01-4.831-1.244.75.75 0 01-.298-1.205A8.217 8.217 0 005.25 9.75V9zm4.502 8.9a2.25 2.25 0 104.496 0 25.057 25.057 0 01-4.496 0z"
+                                            clipRule="evenodd"></path>
+                                    </svg>
+                                </span>
+                                <h5
+                                    className="block font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-lime-400">
+                                   Artistic Labs
+                                </h5>
+                            </div>
+                            <div className="flex gap-4 pb-8">
+                                <span className="flex-shrink-0 invisible h-full pointer-events-none"></span>
+                                <div>
+                                    <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-200">
+                                        Frontend Engineer
+                                    </p>
+                                    <ol className='list-disc gap-4 flex flex-col'>
+                                        <li>
+                                            <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-500 ">   A Decentralized messaging platform for people and communities looking to engage with Web3 products and services.</p>
+                                        </li>
+                                        <li>
+                                            <p className="block font-sans text-base antialiased font-normal leading-relaxed text-gray-500 "> Designed, Developed, Researched, and managed the successful launch of <a href='http://gamic.app' className='text-lime-400' target='_blank'>http://gamic.app/ </a>. App available on playstore and appstore.
+
+
+                                            </p>
+                                        </li>
+                                       
+
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <li className="relative flex flex-col gap-2">
                             <div className="flex items-center gap-4">
                                 <span className="relative z-[2] w-max flex-shrink-0 overflow-hidden rounded-full bg-gray-900 p-2 text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
