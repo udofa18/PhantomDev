@@ -4,6 +4,7 @@ import '../props/MovingText.css'; // Import CSS file for styling
 import { useState, useEffect } from 'react'
 import { faCss3, faGit, faGithub, faHtml5, faLinkedin, faReact, faTwitter, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Home() {
 
@@ -30,7 +31,7 @@ function Home() {
         <div className='relative flex  flex-col items-stretch m-auto h-screen sm:h-full '>
 
             <div className='flex sm:flex-col md:flex-col m-auto justify-between px-20 md:px-10 md:p-20 py-28 sm:py-10   sm:px-5 ' >
-                <div className='w-1/2 m-auto sm:w-full md:w-full'>
+                <div className='w-1/2 m-auto sm:w-full md:w-full flex flex-col gap-5'>
                     <h3 className='text-xl py-10 sm:text-xl text-yellow-600'>Hi there!!😁</h3>
                     <h1 style={{ fontFamily: "monospace" }} className=' text-4xl text-lime-400  sm:text-3xl md:text-4xl'>
                         <TypeAnimation
@@ -49,6 +50,8 @@ function Home() {
 
 
                     </div>
+                   <Link to='/projects' className='text-lime-600 text-xl flex justify-left gap-20 w-fit flex-wrap sm:gap-5 bg-black border border-lime-600 p-2 rounded-lg hover:bg-lime-600/70 hover:text-white transition-all duration-300'>My Projects</Link>
+                    
                 </div>
 
                 <div className='m-auto  w-1/2 right sm:w-full flex flex-col  sm:py-10 md:py-10  md:w-full '>
