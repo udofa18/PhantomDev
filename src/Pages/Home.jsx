@@ -86,6 +86,7 @@ function Home() {
                   alt="Daniel Udofa" 
                   className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-4 border-lime-500/50 shadow-2xl shadow-lime-500/20 animate-float"
                 />
+                <h1 className="text-2xl font-bold text-lime-600 dark:text-lime-400 text-center"> <span className="text-gray-900 dark:text-white">Daniel Udofa</span> </h1>
               </div>
             </div>
           </div>
