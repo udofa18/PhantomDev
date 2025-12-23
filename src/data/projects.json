@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "title": "Crystalveey Atelier",
+    "description": "Crystalveeys' atelier is a fashion merchandise and recommerce site that allows individuals to Buy and sell their favorite fashion pieces.",
+    "image": "/images/atelier.png",
+    "liveUrl": "https://atelier.crystalveey.com/",
+    "githubUrl": null,
+    "stack": ["Next.js", "Tailwind CSS", "Firebase"],
+    "category": "Next.js"
+  },
+  {
+    "id": 2,
+    "title": "Wholesquare",
+    "description": "A Social network designed for relaxation, enjoyment, and insight, as we connect, collaborate, and explore together!",
+    "image": "/images/wholesquare.png",
+    "liveUrl": "https://www.wholesquare.org/",
+    "githubUrl": null,
+    "stack": ["Next.js", "Tailwind CSS", "Firebase"],
+    "category": "Next.js"
+  },
+  {
+    "id": 3,
+    "title": "Gamic HQ",
+    "description": "Gamic HQ is a decentralized messaging platform for people and communities looking to engage with Web3 products and services.",
+    "image": "/images/gamic.png",
+    "liveUrl": "https://gamic.app/",
+    "githubUrl": null,
+    "stack": ["WalletConnect", "Web3", "Metamask"],
+    "category": "Web3"
+  },
+  {
+    "id": 4,
+    "title": "Ping Developer platform",
+    "description": "Ping Developer challenge platform where ping users contribute to the platform by creating challenges and winning prizes.",
+    "image": "/images/ping.png",
+    "liveUrl": "https://developer-challenges-ap5b.vercel.app/",
+    "githubUrl": null,
+    "stack": ["Next.js", "Tailwind CSS", "Vercel", "CRUD"],
+    "category": "Next.js"
+  },
+  {
+    "id": 5,
+    "title": "Github Api Fetch",
+    "description": "An assignment task that Featches My Repositores from Github and shows relevant information about REPO.",
+    "image": "/images/github.png",
+    "liveUrl": "https://github-ass.vercel.app/",
+    "githubUrl": null,
+    "stack": ["Vue", "Tailwind", "Github"],
+    "category": "UI"
+  },
+  {
+    "id": 6,
+    "title": "Ticketchain",
+    "description": "A web3 Application for Blockchain Event organizers and attendees. Decentralized ticketing platform built on Mode Blockchain",
+    "image": "/images/ticketchain.png",
+    "liveUrl": "https://ticketchain-test.vercel.app/",
+    "githubUrl": "https://github.com/udofa18/ticketchain-test",
+    "stack": ["React", "Thirdweb", "Solidity", "Web3"],
+    "category": "Web3"
+  },
+  {
+    "id": 7,
+    "title": "Crystalveey",
+    "description": "Crystalveey is a portfolio company encompassing a fashion merchandize and re-commerce brand that produces quality clothing for both male and female, a like-minded community platfrom.",
+    "image": "/images/crystalveey.png",
+    "liveUrl": "https://www.crystalveey.com/",
+    "githubUrl": null,
+    "stack": ["React", "Tailwind", "Vite"],
+    "category": "React"
+  },
+  {
+    "id": 8,
+    "title": "ManeLabs",
+    "description": "a SAAS company out to meet various needs for individuals and firms. Our offering range from product and identity design to web and mobile app development, hosting and related services.",
+    "image": "/images/mane.png",
+    "liveUrl": "https://mane-labs.vercel.app/",
+    "githubUrl": null,
+    "stack": ["Vue", "Tailwind", "Github"],
+    "category": "UI"
+  },
+  {
+    "id": 9,
+    "title": "Xedla pay",
+    "description": "A Safe and Reliable Option for Buyers and Sellers, Perform all your day to day financial transaction.",
+    "image": "/images/xedla.png",
+    "liveUrl": "https://www.xedla.com/",
+    "githubUrl": null,
+    "stack": ["Next.js", "Tailwind CSS"],
+    "category": "Next.js"
+  }
+]
+
