@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Managing \"STRESS😩\"as Software Engineer",
+    "abstract": "Managing stress as a software engineer is crucial for maintaining both your mental well-being and your productivity. This article explores practical strategies and techniques to help developers cope with the unique challenges of the profession.",
+    "date": "2024",
+    "category": "Career",
+    "image": "/images/stress.png",
+    "readUrl": "https://danielscode.hashnode.dev/managing-stressas-software-engineer",
+    "pdfUrl": null
+  },
+  {
+    "id": 2,
+    "title": "Beginners Guide to Developer Relations",
+    "abstract": "At its core, Developer Relations is about establishing and maintaining a strong bond between developers and the company's products or services. This comprehensive guide covers the fundamentals of DevRel and how to get started.",
+    "date": "2024",
+    "category": "Developer Relations",
+    "image": "/images/dev.png",
+    "readUrl": "https://danielscode.hashnode.dev/beginners-guide-to-developer-relations",
+    "pdfUrl": null
+  },
+  {
+    "id": 3,
+    "title": "How to give your site an animated background using particle.js",
+    "abstract": "Particles.js is a JavaScript library for creating animated, interactive particle backgrounds for web pages. Learn how to implement stunning particle effects to enhance your website's visual appeal.",
+    "date": "2023",
+    "category": "Tutorial",
+    "image": "/images/amina.png",
+    "readUrl": "https://danielscode.hashnode.dev/how-to-give-your-site-an-animated-background-using-particlejs",
+    "pdfUrl": null
+  }
+]
+

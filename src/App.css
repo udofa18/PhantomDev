@@ -1,25 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-html{
-
-  background-color: #242424;
-
-}
+/* Additional custom styles for the portfolio */
 #root {
-  background-image: radial-gradient( circle 477px at 0.9% -1.8%,  rgba(206,242,42,1) 0%, rgba(123,128,8,1) 43.9%, rgba(45,46,3,1) 84.2%, rgba(30,3,3,1) 99.3% );
-  /* background-color: #242424; */
-margin: 0;
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
 }
 
-
-
-.card {
-  padding: 2em;
+/* Animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
-.read-the-docs {
-  color: #888;
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
 }

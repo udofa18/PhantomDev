@@ -1,529 +1,133 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-  ButtonGroup,
-  Badge,
-} from "@material-tailwind/react";
-// import { Swiper, SwiperSlide } from 'swip/er/react';
+import { useState, useMemo } from 'react';
+import Card from '../Components/Card';
+import Button from '../Components/Button';
+import SectionHeader from '../Components/SectionHeader';
+import Badge from '../Components/Badge';
+import projectsData from '../data/projects.json';
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-function Projecs() {
+function Projects() {
+  const [selectedFilter, setSelectedFilter] = useState('All');
+
+  // Get unique categories
+  const categories = useMemo(() => {
+    const uniqueCategories = [...new Set(projectsData.map(project => project.category))];
+    return ['All', ...uniqueCategories];
+  }, []);
+
+  // Filter projects
+  const filteredProjects = useMemo(() => {
+    if (selectedFilter === 'All') {
+      return projectsData;
+    }
+    return projectsData.filter(project => project.category === selectedFilter);
+  }, [selectedFilter]);
+
   return (
-    <>
-      <div className="h-screen sm:h-full">
-        <h1 className="text-center sm:py-10 pt-20 sm:pt-36 pb-5 text-lime-400 text-2xl font-bold">
-          <span className="text-white">{"<"}</span> Projects{" "}
-          <span className="text-white">{">"}</span>
-        </h1>
-        <p className="text-center py-5 text-gray-300">
-          {" "}
-          For more projects Visit my{" "}
-          <a
-            href="https://github.com/udofa18"
-            target="_blank"
-            className="text-lime-500 "
-          >
-            Github Account
-          </a>
-        </p>
-        <div className="flex   justify-center gap-5  ">
-          <Swiper
-            slidesPerView={4}
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: true,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-            breakpoints={{
-              360: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-              },
-              430: {
-                slidesPerView: 1.2,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-              },
-            }}
-          >
-            <SwiperSlide>
-              <Card className="w-80 nav sm:w-full bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/atelier.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl ">
-                      Crystalveey Atelier
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    Crystalveeys’ atelier is a fashion merchandise and
-                    recommerce site that allows individuals to Buy and sell
-                    their favorite fashion pieces.
-                  </Typography>
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <SectionHeader 
+          title="Projects" 
+          subtitle="A collection of my work across different technologies and domains"
+        />
 
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Next.js
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind CSS
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Firebase
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://atelier.crystalveey.com/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/wholesquare.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Wholesquare
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    A Social network designed for relaxation, enjoyment, and
-                    insight, as we connect, collaborate, and explore together!
-                  </Typography>
+        {/* Filter Buttons */}
+        <div className="mb-12 flex flex-wrap gap-3 justify-center">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setSelectedFilter(category)}
+              className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+                selectedFilter === category
+                  ? 'bg-lime-500/20 text-lime-400 border border-lime-500/50 shadow-lg shadow-lime-500/10'
+                  : 'bg-white/80 dark:bg-black/40 text-gray-700 dark:text-gray-300 border border-lime-500/20 hover:bg-lime-500/10 hover:text-lime-600 dark:hover:text-lime-400 hover:border-lime-500/40 transition-colors duration-300'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Next.js
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind CSS
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Firebase
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://www.wholesquare.org/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
+        {/* Projects Grid */}
+        {filteredProjects.length > 0 ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project) => (
+              <Card key={project.id} className="overflow-hidden">
+                <div className="relative h-48 overflow-hidden">
                   <img
-                    src="/images/gamic.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Gamic HQ
-                    </Typography>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-lime-400 mb-3">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  
+                  {/* Stack Badges */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.stack.map((tech, idx) => (
+                      <Badge key={idx} variant="default">{tech}</Badge>
+                    ))}
                   </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    Gamic HQ is a decentralized messaging platform for people
-                    and communities looking to engage with Web3 products and
-                    services.{" "}
-                  </Typography>
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      WalletConnect
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Web3
-                    </li>
 
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-Metamask                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://gamic.app/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/ping.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Ping Developer platform
-                    </Typography>
+                  {/* Action Buttons */}
+                  <div className="flex gap-2">
+                    {project.liveUrl && (
+                      <Button
+                        href={project.liveUrl}
+                        variant="primary"
+                        size="sm"
+                        className="flex-1"
+                      >
+                        Live
+                      </Button>
+                    )}
+                    {project.githubUrl && (
+                      <Button
+                        href={project.githubUrl}
+                        variant="secondary"
+                        size="sm"
+                        className="flex-1"
+                      >
+                        GitHub
+                      </Button>
+                    )}
+                    {!project.githubUrl && project.liveUrl && (
+                      <div className="flex-1"></div>
+                    )}
                   </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    Ping Developer challenge platform where ping users contribute to the platform by creating challenges and winning prizes.
-                  </Typography>
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Next.Js
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind CSS
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Vercel
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      CRUD
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://developer-challenges-ap5b.vercel.app/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
+                </div>
               </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/github.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Github Api Fetch
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    An assignment task that Featches My Repositores from Github
-                    and shows relevant information about REPO. ...
-                  </Typography>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <p className="text-gray-600 dark:text-gray-400 text-lg">No projects found in this category.</p>
+          </div>
+        )}
 
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Vue
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Github
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://github-ass.vercel.app/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/ticketchain.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Ticketchain
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    A web3 Application for Blockchain Event organizers and
-                    attendees. Decentralized ticketing platform built on Mode
-                    Blockchain
-                  </Typography>
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      React
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Thirdweb
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Solidity
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Web3
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a
-                    href="https://ticketchain-test.vercel.app/"
-                    target="_blank"
-                  >
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/crystalveey.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Crystalveey
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    Crystalveey is a portfolio company encompassing a fashion
-                    merchandize and re-commerce brand that produces quality
-                    clothing for both male and female, a like-minded community
-                    platfrom.
-                  </Typography>
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      React
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Vite
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://www.crystalveey.com/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/mane.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      ManeLabs
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                    a SAAS company out to meet various needs for individuals and
-                    firms. Our offering range from product and identity design
-                    to web and mobile app development, hosting and related
-                    services.{" "}
-                  </Typography>
-
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Vue
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Github
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://mane-labs.vercel.app/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Card className="w-80 sm:w-full  bg-black/50 border border-lime-500 shadow-2xl shadow-lime-900   backdrop-blur-2xl backdrop-saturate-100">
-                <CardHeader shadow={false} floated={false} className="h-60">
-                  <img
-                    src="/images/xedla.png"
-                    alt="card-image"
-                    className="h-full w-full object-cover"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <div className="mb-2 flex items-center justify-between">
-                    <Typography color="lime" className="text-xl">
-                      Xedla pay
-                    </Typography>
-                  </div>
-                  <Typography
-                    variant="small"
-                    color="gray"
-                    className="font-normal text-gray-400"
-                  >
-                   A Safe and Reliable Option for Buyers and Sellers, Perform all your day to day financial transaction .
-                  </Typography>
-
-                  <ul className="flex m-auto  text-sm text-gray-200 justify-center my-2 bg-black p-2 rounded-lg">
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Next.js
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                      Tailwind CSS
-                    </li>
-                    <li className="font-bold border-r px-1 border-r-yellow-500">
-                    </li>
-                  </ul>
-                </CardBody>
-                <CardFooter className="pt-0">
-                  <a href="https://www.xedla.com/" target="_blank">
-                    <Button
-                      ripple={false}
-                      fullWidth={true}
-                      className="bg-lime-600 text-blue-gray-900 shadow-none hover:scale-105 hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-                    >
-                      Visit Site
-                    </Button>
-                  </a>
-                </CardFooter>
-              </Card>
-            </SwiperSlide>
-
-          </Swiper>        </div>
+        {/* GitHub Link */}
+        <div className="text-center mt-12">
+          <p className="text-gray-600 dark:text-gray-400 mb-4">
+            For more projects, visit my{' '}
+            <a
+              href="https://github.com/udofa18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lime-400 hover:text-lime-300 transition-colors underline"
+            >
+              GitHub Account
+            </a>
+          </p>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Projecs;
+export default Projects;

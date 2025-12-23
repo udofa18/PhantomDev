@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "company": "AltSchool Africa",
+    "title": "Diploma in Software Engineering",
+    "dateRange": "2022 - 2023",
+    "type": "education",
+    "achievements": [
+      "Graduated from the school of engineering, passing all test and exams",
+      "Gained insights into popular frontend frameworks like React and Vue.js, enabling me to build robust and interactive web applications",
+      "Learnt how to communicate with server-side APIs to fetch and display data on web applications",
+      "Mastered the art of creating websites that adapt seamlessly to different screen sizes and devices, ensuring an optimal user experience"
+    ],
+    "techStack": ["React", "Vue.js", "APIs", "Responsive Design"]
+  },
+  {
+    "id": 2,
+    "company": "Crystalveey",
+    "title": "Frontend Engineer",
+    "dateRange": "2023 - Present",
+    "type": "work",
+    "achievements": [
+      "A Portfolio Company providing Fashion, re-commerce, travel, charity and community Services",
+      "Designed, Developed, Researched, and managed the successful launch of multiple platforms including atelier.crystalveey.com, wholesquare.org, crystalveey.com, and untagg.crystalveey.com"
+    ],
+    "techStack": ["Next.js", "React", "Tailwind CSS", "Firebase"]
+  },
+  {
+    "id": 3,
+    "company": "Xedla pay",
+    "title": "Cofounder and Software Engineer",
+    "dateRange": "2023 - Present",
+    "type": "work",
+    "achievements": [
+      "A Safe and Reliable Option for Buyers and Sellers, Perform all your day to day financial transaction",
+      "Designed, Developed, Researched, and managed the successful launch of xedla.com. App available on playstore and appstore"
+    ],
+    "techStack": ["Next.js", "Tailwind CSS", "Mobile Development"]
+  },
+  {
+    "id": 4,
+    "company": "Artistic Labs",
+    "title": "Frontend Engineer",
+    "dateRange": "2023 - Present",
+    "type": "work",
+    "achievements": [
+      "A Decentralized messaging platform for people and communities looking to engage with Web3 products and services",
+      "Designed, Developed, Researched, and managed the successful launch of gamic.app. App available on playstore and appstore"
+    ],
+    "techStack": ["Web3", "WalletConnect", "Metamask", "React"]
+  },
+  {
+    "id": 5,
+    "company": "DX Mentorship",
+    "title": "Developer Relation Advocate",
+    "dateRange": "2024",
+    "type": "work",
+    "achievements": [
+      "Equipped with knowledge and information that will propel me into a fulfilling Developer Advocacy career",
+      "Worked with a team to plan, manage, and strategize on the course of the program",
+      "Got basic Developer relation skills e.g Communication Skills, Community Engagement, Advocacy and Empathy, Content Creation, Problem-Solving, Public Speaking, Feedback Loop Management"
+    ],
+    "techStack": ["Developer Relations", "Community Management", "Content Creation"]
+  },
+  {
+    "id": 6,
+    "company": "Chainlink Bootcamp",
+    "title": "Certificate of Participation (Web3)",
+    "dateRange": "2023",
+    "type": "education",
+    "achievements": [
+      "Learnt how to write smart contracts with Chainlink Developer Advocates",
+      "Deployed my first smart contract, created token, created and minted NFTs"
+    ],
+    "techStack": ["Solidity", "Smart Contracts", "Chainlink", "NFTs"]
+  },
+  {
+    "id": 7,
+    "company": "BCAMP (Web3)",
+    "title": "Mode Solidity Bootcamp",
+    "dateRange": "2024",
+    "type": "education",
+    "achievements": [
+      "Bootcamp for web3 Enthusiast and Developers. Worked with a solidity developer and Backend developer to create a Decentralised ticketing platform for event organizers and attendees using the Mode Network, Thirdweb, IPFS etc",
+      "Built Ticketchain - a decentralized ticketing platform"
+    ],
+    "techStack": ["Solidity", "Mode Network", "Thirdweb", "IPFS", "Web3"]
+  }
+]
+
