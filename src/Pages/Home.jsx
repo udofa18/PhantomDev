@@ -1,7 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCss3, faGit, faGithub, faHtml5, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
-import { Link } from 'react-router-dom';
+import {  faGit, faGithub, faHtml5, faReact, faVuejs, } from '@fortawesome/free-brands-svg-icons';
 import Button from '../Components/Button';
 import Card from '../Components/Card';
 import SectionHeader from '../Components/SectionHeader';
@@ -14,10 +13,13 @@ function Home() {
   const skills = [
     { name: 'React', icon: faReact },
     { name: 'Vue.js', icon: faVuejs },
-    { name: 'HTML5', icon: faHtml5 },
-    { name: 'CSS3', icon: faCss3 },
     { name: 'Git', icon: faGit },
-    { name: 'Next.js', icon: faReact },
+    { name: 'Next.js', icon: faReact }, 
+    { name: 'Typescript', icon: faReact  },
+    { name: 'Tailwind CSS', icon: faReact },
+    { name: 'JavaScript', icon: faReact },
+    { name: 'Firebase', icon: faReact },
+
   ];
 
   const testimonials = [
