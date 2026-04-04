@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "title": "Bitroot Conference",
+    "role": "Organizer",
+    "date": "November 7, 2025",
+    "location": "DePeace Hotel & Suites · Ilorin, Kwara State",
+    "image": "/images/community/bitroot-conference.png",
+    "imageAlt": "Bitroot conference team in branded shirts and caps",
+    "description": "Speaker engagement on \"How Can Web3 Transform Africa?\" with 200+ attendees. Drove new community signups and elevated CoinW brand awareness across Northern Nigeria."
+  },
+  {
+    "id": 2,
+    "title": "Ilorin Web3 Tech Conference",
+    "role": "Organizer",
+    "date": "2025",
+    "location": "Ilorin, Kwara State, Nigeria",
+    "image": "/images/community/web3-tech-conference.png",
+    "imageAlt": "Large auditorium with 1,000+ attendees at the Ilorin Web3 Tech Conference",
+    "description": "Mass adoption drive with 1,000+ attendees. Full-scale community onboarding — hundreds of new registrations and significant CoinW Africa expansion."
+  },
+  {
+    "id": 3,
+    "title": "Nigeria Fintech Forum",
+    "role": "Brand representation",
+    "date": "2025",
+    "location": "Lagos · Industry networking",
+    "image": "/images/community/nigeria-fintech-forum.png",
+    "imageAlt": "Nigeria Fintech Forum — Daniel Udofa with event badge and forum signage",
+    "description": "Brand representation and partnership development. New KOL connections and elevated visibility among industry decision-makers."
+  },
+  {
+    "id": 4,
+    "title": "CoinW Brand Event — Abuja",
+    "role": "Organizer · Speaking",
+    "date": "2025",
+    "location": "Abuja",
+    "description": "Brand education and community onboarding. Direct engagement elevated brand presence and drove platform adoption."
+  }
+]

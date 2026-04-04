@@ -27,7 +27,7 @@ function Experience() {
         <Card className="p-6">
           <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                                 <div>
-              <h3 className="text-xl font-bold text-lime-400 mb-1">
+              <h3 className="text-xl font-bold text-lime-700 dark:text-lime-400 mb-1">
                 {experience.title}
               </h3>
               <p className="text-lg text-gray-900 dark:text-white font-semibold mb-1">
@@ -41,7 +41,7 @@ function Experience() {
           <ul className="space-y-2 mb-4">
             {experience.achievements.map((achievement, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <span className="text-lime-400 mt-1">▹</span>
+                <span className="text-lime-600 dark:text-lime-400 mt-1">▹</span>
                 <span className="text-gray-700 dark:text-gray-300 text-sm">{achievement}</span>
                         </li>
             ))}
@@ -69,10 +69,10 @@ function Experience() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Work Experience */}
           <div>
-            <h2 className="text-2xl font-bold text-lime-400 mb-8 flex items-center gap-3">
+            <h2 className="text-2xl font-bold text-lime-700 dark:text-lime-400 mb-8 flex items-center gap-3">
               <span className="text-gray-500 dark:text-white/50">&lt;</span>
               Work Experience
-              <span className="text-white/50">/&gt;</span>
+              <span className="text-gray-400 dark:text-white/50">/&gt;</span>
             </h2>
             <div className="space-y-0">
               {workExperience.map((exp, index) => (
@@ -87,10 +87,10 @@ function Experience() {
 
           {/* Education */}
                                 <div>
-            <h2 className="text-2xl font-bold text-lime-400 mb-8 flex items-center gap-3">
+            <h2 className="text-2xl font-bold text-lime-700 dark:text-lime-400 mb-8 flex items-center gap-3">
               <span className="text-gray-500 dark:text-white/50">&lt;</span>
               Education & Training
-              <span className="text-white/50">/&gt;</span>
+              <span className="text-gray-400 dark:text-white/50">/&gt;</span>
             </h2>
             <div className="space-y-0">
               {education.map((exp, index) => (

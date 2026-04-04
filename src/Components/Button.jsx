@@ -11,7 +11,7 @@ const Button = ({
   disabled = false,
   ...props 
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed';
   
   const variants = {
     primary: 'bg-lime-500/20 text-lime-600 dark:text-lime-400 border border-lime-500/50 hover:bg-lime-500/30 hover:border-lime-400 hover:text-lime-700 dark:hover:text-lime-300 hover:shadow-lg hover:shadow-lime-500/20 focus:ring-lime-500/50',

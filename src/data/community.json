@@ -1,0 +1,149 @@
+{
+  "hero": {
+    "name": "Daniel Udofa (Phantom)",
+    "title": "Community & Social Media Growth Strategist",
+    "tagline": "I Build Communities. I Drive Growth. I Create Impact.",
+    "aliases": ["Phantom in Web3"],
+    "contact": {
+      "email": "danieludofa452@gmail.com",
+      "phone": ["+2348058534109", "+2347019027572"],
+      "location": "Ilorin, Kwara State, Nigeria",
+      "linkedin": "https://www.linkedin.com/in/daniel-udofa-865778149/",
+      "twitter": "https://twitter.com/Udofa18",
+      "portfolio": "https://phantom-dev-smoky.vercel.app/"
+    }
+  },
+  "summary": {
+    "headline": "Social Media & Community Leadership",
+    "paragraphs": [
+      "Daniel Udofa — known in the Web3 space as Phantom — is a community architect and social media growth operator with a proven track record in Africa's fast-evolving fintech and crypto ecosystem. With deep expertise in building and scaling digital communities, executing high-impact campaigns, and forging meaningful KOL partnerships, Daniel has operated at the intersection of technology, culture, and growth strategy.",
+      "From running standing-room-only physical events across Africa to managing X accounts that reach millions of impressions, Daniel brings both boots-on-the-ground presence and data-driven execution to every project he touches.",
+      "An experienced Social Media and Community Manager with 5+ years supporting leading blockchain projects and crypto exchanges — skilled in community growth, content strategy, moderation, campaign execution, and stakeholder collaboration."
+    ],
+    "brands": "Ex-OKX · Ex-CoinW · Ex-LBank · Ex-Hotbit · Ex-Gate · Ex-Huobi",
+    "portraitSrc": "/images/community/daniel-about-portrait.png",
+    "portraitAlt": "Daniel Udofa at a fintech industry event — CoinW, All Access pass"
+  },
+  "stats": [
+    { "value": "21.4K", "label": "Twitter/X followers", "detail": "CoinW Africa account growth" },
+    { "value": "3M", "label": "Monthly impressions", "detail": "December 2025 peak" },
+    { "value": "120.9K", "label": "Engagements", "detail": "December 2025 total interactions" },
+    { "value": "10.1%", "label": "Engagement rate", "detail": "May 2025 (industry avg. 1–3%)" },
+    { "value": "117%", "label": "MoM growth", "detail": "Impression increase" },
+    { "value": "600K+", "label": "Community impact", "detail": "User growth contribution (ecosystem projects)" }
+  ],
+  "impactProofs": [
+    {
+      "src": "/images/community/analytics/x-analytics-december-2025.png",
+      "alt": "X Analytics dashboard: account overview December 1–31, 2025",
+      "caption": "December 2025 — peaks including 3M impressions (+117% vs prior period) and 120.9K engagements (CoinW Africa / managed account)."
+    },
+    {
+      "src": "/images/community/analytics/x-analytics-may-2025.png",
+      "alt": "X Analytics dashboard: account overview May 1–31, 2025",
+      "caption": "May 2025 — 10.1% engagement rate and 42.8K impressions in the monthly window."
+    }
+  ],
+  "pillars": [
+    {
+      "title": "Community Growth Strategy",
+      "body": "Building and nurturing Telegram, Discord, and X communities from the ground up — structuring engagement systems, onboarding flows, and retention loops."
+    },
+    {
+      "title": "Social Media Expansion",
+      "body": "Growing brand presence on X through consistent content strategy, trend-riding, viral campaigns, and audience-first storytelling — proven ability to 2x–10x follower counts and engagement."
+    },
+    {
+      "title": "Campaign & KOL Management",
+      "body": "Identifying, negotiating, and managing Key Opinion Leader partnerships across African crypto and Web3 markets — end-to-end campaign execution from brief to results."
+    },
+    {
+      "title": "Event Planning & Execution",
+      "body": "Organizing physical and virtual events — from intimate meetups to large-scale conferences. Managing logistics, speakers, registrations, and post-event follow-up."
+    },
+    {
+      "title": "Engagement & Retention Systems",
+      "body": "AMAs, giveaways, weekly spaces, reward programs, and community governance that convert followers into loyal members."
+    }
+  ],
+  "roles": [
+    {
+      "company": "CoinW",
+      "title": "Community Lead",
+      "region": "Africa",
+      "bullets": [
+        "Scaled African community presence across Telegram, X, and other platforms.",
+        "Executed regional social strategies aligned with global campaigns and local trends.",
+        "Organized AMAs, local events, and online activations.",
+        "Built relationships with KOLs and partners across Nigeria, Kenya, Ghana, South Africa, and beyond.",
+        "Monitored sentiment and collaborated with internal teams to improve product experience."
+      ]
+    },
+    {
+      "company": "OKX Exchange",
+      "title": "Community Support & Management",
+      "bullets": [
+        "Regional social strategies and AMAs; reward campaigns and trading competitions onboarding thousands of users."
+      ]
+    },
+    {
+      "company": "BIB Crypto Exchange",
+      "title": "Senior Community Manager",
+      "bullets": [
+        "Discord structure, Telegram management, bots, local ambassadors, and marketing plan execution."
+      ]
+    },
+    {
+      "company": "Huobi · LBank · Hotbit · Gamic Guild · STAMPSDAQ NFT · Solana Prime",
+      "title": "Community & Social Roles",
+      "bullets": [
+        "Global and regional communities, events, content, moderation, and growth initiatives."
+      ]
+    }
+  ],
+  "whyMe": {
+    "intro": "I don't just post content. I build systems. Most social media managers chase vanity metrics. I chase outcomes: real community growth, genuine engagement, and measurable business impact.",
+    "points": [
+      { "title": "I Execute", "text": "From strategy doc to live event, I see it through." },
+      { "title": "I Understand the Ecosystem", "text": "Crypto, fintech, and African market dynamics are in my DNA." },
+      { "title": "I Own the Results", "text": "If the numbers don't move, I iterate until they do." },
+      { "title": "I Build Relationships", "text": "With KOLs, community members, and brand partners." },
+      { "title": "I Show Up", "text": "Physically and digitally — brands represented with integrity." }
+    ],
+    "closing": "If you need someone who will treat your community like it's their own — that's what I bring to the table."
+  },
+  "tools": {
+    "Community Platforms": ["Telegram", "Discord", "X (Twitter)", "Reddit"],
+    "Content": ["Canva", "CapCut"],
+    "Analytics": ["X Analytics", "Telegram Analytics", "Google Analytics"],
+    "Engagement": ["Twitter Spaces", "Zoom AMAs", "Typeform"],
+    "Crypto Ecosystem": ["CoinW", "GameFi", "Web3 Wallets", "DeFi Platforms"],
+    "Project Management": ["Notion", "Google Workspace", "Trello", "Airtable"]
+  },
+  "education": {
+    "degree": "BSc Public Administration",
+    "school": "University of Ilorin, Nigeria"
+  },
+  "campaigns": [
+    {
+      "name": "Trump Tariff AMA Campaign",
+      "date": "May 8, 2025",
+      "summary": "Live AMA on X Spaces with a blockchain consultant; cross-channel promotion; $50 USDT incentive — high participation and brand awareness."
+    },
+    {
+      "name": "BTC $175K Giveaway",
+      "date": "November 2025",
+      "summary": "Viral engagement tied to Grok AI BTC prediction — 418 replies · 339 retweets · 419 likes · 10K views."
+    },
+    {
+      "name": "$300 Weekend Airdrop",
+      "date": "December 2025",
+      "summary": "5 × $50 USDT + 5 × $250 futures bonuses — 665 replies · 568 retweets · 656 likes · 10K views."
+    },
+    {
+      "name": "CoinW Africa Booster AMA (Telegram)",
+      "date": "2025",
+      "summary": "One of the largest community calls on Telegram — 500+ participants; $50 USDT reward; recognized by CoinW community members."
+    }
+  ]
+}

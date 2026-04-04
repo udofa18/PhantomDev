@@ -38,7 +38,7 @@ function Projects() {
               onClick={() => setSelectedFilter(category)}
               className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
                 selectedFilter === category
-                  ? 'bg-lime-500/20 text-lime-400 border border-lime-500/50 shadow-lg shadow-lime-500/10'
+                  ? 'bg-lime-500/20 text-lime-700 dark:text-lime-400 border border-lime-500/50 shadow-lg shadow-lime-500/10'
                   : 'bg-white/80 dark:bg-black/40 text-gray-700 dark:text-gray-300 border border-lime-500/20 hover:bg-lime-500/10 hover:text-lime-600 dark:hover:text-lime-400 hover:border-lime-500/40 transition-colors duration-300'
               }`}
             >
@@ -61,7 +61,7 @@ function Projects() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-lime-400 mb-3">
+                  <h3 className="text-xl font-bold text-lime-700 dark:text-lime-400 mb-3">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
@@ -119,7 +119,7 @@ function Projects() {
               href="https://github.com/udofa18"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lime-400 hover:text-lime-300 transition-colors underline"
+              className="text-lime-700 dark:text-lime-400 hover:text-lime-800 dark:hover:text-lime-300 transition-colors underline"
             >
               GitHub Account
             </a>
