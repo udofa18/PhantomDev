@@ -15,6 +15,7 @@ function Navigation() {
     { to: "/publications", label: "Publications" },
     { to: "/projects", label: "Projects" },
     { to: "/experience", label: "Experience" },
+    { to: "/community", label: "Community" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -28,7 +29,7 @@ function Navigation() {
             to="/" 
             className="flex items-center space-x-2 group transition-all duration-300"
           >
-            <span className="text-2xl font-bold text-lime-400 group-hover:text-lime-300 transition-colors">
+            <span className="text-2xl font-bold text-lime-700 dark:text-lime-400 group-hover:text-lime-800 dark:group-hover:text-lime-300 transition-colors">
               PhantomDev
             </span>
             <span className="text-gray-600 dark:text-white/50 text-lg">&lt;/&gt;</span>
@@ -56,7 +57,7 @@ function Navigation() {
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 hover:border-lime-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-500/50"
+              className="p-2 rounded-lg text-lime-700 dark:text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 hover:border-lime-500/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-500/50"
               aria-label="Toggle theme"
             >
               <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
@@ -76,7 +77,7 @@ function Navigation() {
           <div className="md:hidden flex items-center space-x-2">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-500/50"
+              className="p-2 rounded-lg text-lime-700 dark:text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-500/50"
               aria-label="Toggle theme"
               type="button"
             >
@@ -84,7 +85,7 @@ function Navigation() {
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 transition-all duration-300"
+              className="p-2 rounded-lg text-lime-700 dark:text-lime-400 hover:bg-lime-500/10 border border-lime-500/20 transition-all duration-300"
               aria-label="Toggle menu"
             >
               <FontAwesomeIcon icon={mobileMenuOpen ? faTimes : faBars} />
@@ -102,8 +103,8 @@ function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-4 py-2 rounded-lg text-base font-medium transition-all duration-300 ${
                   isActive(link.to)
-                    ? "text-lime-400 bg-lime-500/10 border border-lime-500/30"
-                    : "text-gray-300 hover:text-lime-400 hover:bg-lime-500/5"
+                    ? "text-lime-700 dark:text-lime-400 bg-lime-500/10 border border-lime-500/30"
+                    : "text-gray-800 dark:text-gray-300 hover:text-lime-700 dark:hover:text-lime-400 hover:bg-lime-500/5"
                 }`}
               >
                 {link.label}

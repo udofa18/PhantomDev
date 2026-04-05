@@ -53,7 +53,7 @@ function Publication() {
               className="w-full px-4 py-3 bg-white/80 dark:bg-black/40 border border-lime-500/30 rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-lime-500/50 focus:border-lime-500/50 backdrop-blur-xl transition-colors duration-300"
             />
             <svg 
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-lime-400" 
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-lime-600 dark:text-lime-400" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ function Publication() {
                     <Badge variant="secondary">{publication.category}</Badge>
                     <span className="text-gray-500 text-sm">{publication.date}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-lime-400 mb-3 line-clamp-2">
+                  <h3 className="text-xl font-bold text-lime-700 dark:text-lime-400 mb-3 line-clamp-2">
                     {publication.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">

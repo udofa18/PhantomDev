@@ -14,6 +14,7 @@ module.exports = withMT({
     fontFamily: {
       sans: ["Inter", "sans-serif"],
       accent: ["Rajdhani", "sans-serif"],
+      community: ["Space Grotesk", "Inter", "sans-serif"],
       mono: ["monospace"],
     },
     extend: {
