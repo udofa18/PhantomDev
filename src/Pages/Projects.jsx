@@ -3,6 +3,8 @@ import Card from '../Components/Card';
 import Button from '../Components/Button';
 import SectionHeader from '../Components/SectionHeader';
 import Badge from '../Components/Badge';
+import SEO from '../Components/SEO';
+import { Helmet } from 'react-helmet-async';
 import projectsData from '../data/projects.json';
 
 function Projects() {
@@ -22,20 +24,61 @@ function Projects() {
     return projectsData.filter(project => project.category === selectedFilter);
   }, [selectedFilter]);
 
+  const projectsJsonLd = useMemo(() => {
+    const itemListElement = projectsData.map((p, i) => {
+      const item = {
+        '@type': 'SoftwareApplication',
+        name: p.title,
+        description: p.description,
+        applicationCategory: 'WebApplication',
+        keywords: p.stack.join(', '),
+      };
+      if (p.liveUrl) item.url = p.liveUrl;
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        item,
+      };
+    });
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Daniel Udofa — selected frontend & Web3 projects',
+      description:
+        'Portfolio of React, Next.js, and Web3 projects including live demos and repositories.',
+      numberOfItems: projectsData.length,
+      itemListElement,
+    };
+  }, []);
+
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <SectionHeader 
-          title="Projects" 
+      <SEO
+        title="Projects"
+        description="Selected frontend engineering work: React, Next.js, Web3, and UI — live sites, GitHub links, and tech stacks. Built by Daniel Udofa (Phantom Dev)."
+        keywords="frontend projects, React portfolio, Next.js, Web3, UI engineering, Daniel Udofa, Phantom Dev"
+        canonicalPath="/projects"
+        ogImage="/images/dan.png"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(projectsJsonLd)}</script>
+      </Helmet>
+
+      <main className="max-w-7xl mx-auto">
+        <SectionHeader
+          title="Projects"
           subtitle="A collection of my work across different technologies and domains"
+          titleAs="h1"
         />
 
         {/* Filter Buttons */}
-        <div className="mb-12 flex flex-wrap gap-3 justify-center">
+        <nav className="mb-12 flex flex-wrap gap-3 justify-center" aria-label="Filter projects by stack">
           {categories.map((category) => (
             <button
               key={category}
+              type="button"
               onClick={() => setSelectedFilter(category)}
+              aria-pressed={selectedFilter === category}
               className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
                 selectedFilter === category
                   ? 'bg-lime-500/20 text-lime-700 dark:text-lime-400 border border-lime-500/50 shadow-lg shadow-lime-500/10'
@@ -45,25 +88,28 @@ function Projects() {
               {category}
             </button>
           ))}
-        </div>
+        </nav>
 
         {/* Projects Grid */}
         {filteredProjects.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <Card key={project.id} className="overflow-hidden">
+              <article key={project.id} className="h-full">
+                <Card className="h-full overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`Screenshot: ${project.title} — ${project.stack.slice(0, 3).join(', ')}`}
+                    width={640}
+                    height={360}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-lime-700 dark:text-lime-400 mb-3">
+                  <h2 className="text-xl font-bold text-lime-700 dark:text-lime-400 mb-3">
                     {project.title}
-                  </h3>
+                  </h2>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">
                     {project.description}
                   </p>
@@ -102,7 +148,8 @@ function Projects() {
                     )}
                   </div>
                 </div>
-              </Card>
+                </Card>
+              </article>
             ))}
           </div>
         ) : (
@@ -125,7 +172,7 @@ function Projects() {
             </a>
           </p>
         </div>
-      </div>
+      </main>
     </div>
   );
 }

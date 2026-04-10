@@ -2,23 +2,60 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import content from '../data/community.json';
 import events from '../data/communityEvents.json';
+import SEO from '../Components/SEO';
+import { Helmet } from 'react-helmet-async';
+import { absoluteUrl } from '../config/site';
 
 function Community() {
   useEffect(() => {
-    const prevTitle = document.title;
-    document.title = 'Daniel Udofa (Phantom) | Community & Growth';
     document.documentElement.classList.add('community-route');
     document.body.classList.add('community-route');
     return () => {
-      document.title = prevTitle;
       document.documentElement.classList.remove('community-route');
       document.body.classList.remove('community-route');
     };
   }, []);
-  const { hero, summary, stats, impactProofs, pillars, roles, whyMe, tools, education, campaigns } = content;
+  const { seo, hero, summary, stats, impactProofs, pillars, roles, whyMe, tools, education, campaigns } = content;
 
   return (
     <div className="min-h-screen bg-slate-950 text-rose-50 font-community selection:bg-rose-500/30 selection:text-white">
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        keywords={seo.keywords}
+        canonicalPath={seo.canonicalPath}
+        ogImage={seo.ogImage}
+        twitterSite={seo.twitterSite}
+        omitSiteName={seo.omitSiteName}
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: hero.name,
+            alternateName: hero.aliases?.[0],
+            jobTitle: hero.title,
+            url: absoluteUrl('/community'),
+            image: absoluteUrl(seo.ogImage || '/images/community/daniel-about-portrait.png'),
+            email: hero.contact.email,
+            sameAs: [hero.contact.linkedin, hero.contact.twitter].filter(Boolean),
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Ilorin',
+              addressRegion: 'Kwara State',
+              addressCountry: 'NG',
+            },
+            knowsAbout: [
+              'Community management',
+              'Web3',
+              'Social media growth',
+              'Cryptocurrency exchanges',
+              'Developer relations',
+            ],
+          })}
+        </script>
+      </Helmet>
       {/* Warm gradient + soft grid (distinct from portfolio neon) */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-rose-950/80 via-slate-950 to-amber-950/50" />

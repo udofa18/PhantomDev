@@ -7,6 +7,7 @@ import SectionHeader from '../Components/SectionHeader';
 import Badge from '../Components/Badge';
 import Footer from '../Components/Footer';
 import projectsData from '../data/projects.json';
+import SEO from '../Components/SEO';
 
 function Home() {
   const featuredProjects = projectsData.slice(0, 3);
@@ -37,6 +38,13 @@ function Home() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Home"
+        description="Daniel Udofa (Phantom Dev) — frontend developer, developer advocate, and community manager. React, Next.js, Web3, and publications."
+        keywords="frontend developer, React, Next.js, Web3, portfolio, Nigeria, Phantom Dev, Daniel Udofa"
+        canonicalPath="/"
+        ogImage="/images/dan.png"
+      />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
         <div className="max-w-7xl mx-auto w-full">
