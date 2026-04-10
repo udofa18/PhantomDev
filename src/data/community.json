@@ -1,4 +1,13 @@
 {
+  "seo": {
+    "title": "Daniel Udofa (Phantom) | Community Manager & Social Growth — Web3 Africa",
+    "description": "Community architect and social media growth strategist for Web3 and crypto in Africa. Scaled X communities, events, campaigns — Ex-CoinW, Ex-OKX, Nigeria fintech.",
+    "keywords": "community manager, web3 community, crypto social media, CoinW Africa, Nigeria fintech, X growth, community events, developer relations, Phantom Dev",
+    "canonicalPath": "/community",
+    "ogImage": "/images/community/daniel-about-portrait.png",
+    "twitterSite": "@Udofa18",
+    "omitSiteName": true
+  },
   "hero": {
     "name": "Daniel Udofa (Phantom)",
     "title": "Community & Social Media Growth Strategist",
